@@ -3,14 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noroff FED2 JS2 CA</title>
+    <title>LinkUp - Create Post</title>
     <script type="module" src="/src/app.js"></script>
+    <link rel="stylesheet" href="/src/css/style.css">
   </head>
   <body>
+    <header class="main-header">
+      <div class="container">
+        <a href="/index.html" class="logo">LinkUp</a>
+        <nav>
+          <a href="/" id="home-link">Home</a>
+          <a href="/auth/login/" id="login-link">Login</a>
+          <a href="/auth/register/" id="register-link">Register</a>
+          <a href="/profile/" id="profile-link" style="display: none;">Profile</a>
+          <a href="/post/create/" id="createPostLink" style="display: none;">Create Post</a>
+          <button id="logout-btn" style="display: none;">Logout</button>
+        </nav>
+      </div>
+    </header>
+  <body>
+    <main class="create-form">
     <h1>Create Post</h1>
-
     <form name="createPost">
-      <button>Create Post</button>
+      <div>
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+      </div>
+      <div>
+        <label for="body">Body:</label>
+        <textarea id="body" name="body"></textarea>
+      </div>
+      <div>
+        <label for="tags">Tags (comma-separated):</label>
+        <input type="text" id="tags" name="tags">
+      </div>
+      <div>
+        <label for="media">Media URL:</label>
+        <input type="url" id="media" name="media">
+      </div>
+      <button type="submit">Create Post</button>
     </form>
+  </main>
   </body>
 </html>

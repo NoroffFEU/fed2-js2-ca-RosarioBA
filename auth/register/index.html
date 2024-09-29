@@ -2,16 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noroff FED2 JS2 CA</title>
+    <title></title>
     <script type="module" src="/src/app.js"></script>
+    <link rel="stylesheet" href="/src/css/style.css">
   </head>
-
+  
   <body>
+    <header class="main-header">
+      <div class="container">
+        <a href="/index.html" class="logo">LinkUp</a>
+        <nav>
+          <a href="/" id="home-link">Home</a>
+          <a href="/auth/login/" id="login-link">Login</a>
+        </nav>
+      </div>
     <h1>Register</h1>
-
-    <form name="register">
+    
+    <form id="register-form" name="register">
       <div>
         <label for="name">Name</label>
         <input
@@ -48,8 +56,11 @@
         />
       </div>
 
-      <a href="/auth/login/">Login</a>
       <button>Register</button>
     </form>
+    <script type="module">
+      import { setupRegisterForm } from '/src/js/ui/auth/register.js';
+      document.addEventListener('DOMContentLoaded', setupRegisterForm);
+    </script>
   </body>
 </html>

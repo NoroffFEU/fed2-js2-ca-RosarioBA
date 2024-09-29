@@ -1,22 +1,50 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Noroff FED2 JS2 CA</title>
-  <script type="module" src="/src/app.js"></script>
+  <title>LinkUp</title>
+  <script type="module" src="./src/app.js"></script>
+  <link rel="stylesheet" href="./src/css/style.css">
 </head>
-
 <body>
-  <img src="/images/noroff-logo.png" alt="Noroff Logo" />
+  <header class="main-header">
+    <div class="container">
+      <a href="/index.html" class="logo">LinkUp</a>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./profile/index.html">My Profile</a></li>
+          <li><a href="./auth/login/index.html" id="login-link">Login</a></li>
+          <li><a href="./auth/register/index.html" id="register-link">Register</a></li>
+          <li><button id="logout-btn" style="display: none;">Logout</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <h1>Home</h1>
-
-  <a href="/profile/">My Profile</a>
-  <a href="/auth/login/">Login</a>
-  <a href="/auth/register/">Register</a>
-  <button>Logout</button>
+  <main id="main-content">
+    <div id="create-post-section">
+      <button id="create-post-button">Create Post</button>
+    </div>
+    <div id="posts-container"></div>
+    
+    <!-- Section for displaying a single post -->
+    <div id="single-post-container" style="display: none;">
+      <div id="post-content"></div>
+      <div id="post-reactions"></div>
+      <form id="commentForm">
+        <textarea name="commentBody" required></textarea>
+        <input type="hidden" name="replyToId" value="null">
+        <button type="submit">Add Comment</button>
+      </form>
+      <div id="commentsList"></div>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 LinkUp. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>

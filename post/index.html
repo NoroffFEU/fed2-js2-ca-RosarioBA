@@ -1,13 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noroff FED2 JS2 CA</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkUp - Post</title>
     <script type="module" src="/src/app.js"></script>
-  </head>
-  <body>
-    <h1>Post Page</h1>
-  </body>
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="/index.html" class="logo">LinkUp</a>
+            <nav>
+                <a href="/" id="home-link">Home</a>
+                <a href="/profile/" id="profile-link" style="display: none;">Profile</a>
+                <button id="logout-btn" style="display: none;">Logout</button>
+            </nav>
+        </div>
+    </header>
+    <h1>Post</h1>
+
+    <!-- Posts container where all posts will be listed -->
+    <div id="posts-container"></div>
+
+    <!-- Single post container, hidden initially -->
+    <div id="single-post-container" style="display: none;">
+        <div id="post-content"></div>
+        <div id="post-reactions"></div>
+        <form id="commentForm">
+            <textarea name="commentBody" required></textarea>
+            <input type="hidden" name="replyToId" value="null">
+            <button type="submit">Add Comment</button>
+        </form>
+        <div id="commentsList"></div>
+        <button id="back-to-posts">Back to Posts</button>
+    </div>
+</body>
 </html>
+

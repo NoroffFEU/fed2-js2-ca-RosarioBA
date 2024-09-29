@@ -1,28 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noroff FED2 JS2 CA</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - LinkUp</title>
     <script type="module" src="/src/app.js"></script>
-  </head>
-
-  <body>
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="/index.html" class="logo">LinkUp</a>
+            <nav>
+                <a href="/" id="home-link">Home</a>
+                <a href="/auth/login/" id="login-link">Login</a>
+                <a href="/auth/register/" id="register-link">Register</a>
+            </nav>
+        </div>
     <h1>Login</h1>
-    <form name="login">
-      <div>
-        <label for="email">Email</label>
-        <input id="email" type="email" name="email" required />
-      </div>
-
-      <div>
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" required />
-      </div>
-
-      <a href="/auth/register/">Register</a>
-      <button>Login</button>
+    <form name="login" id="login-form">
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit">Login</button>
     </form>
-  </body>
+    <p>Don't have an account? <a href="/auth/register/">Register here</a></p>
+    <script>
+        console.log('Login page loaded');
+    </script>
+</body>
 </html>
